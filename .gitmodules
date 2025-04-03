@@ -1,0 +1,44 @@
+[submodule "Drivers/STM32N6xx_HAL_Driver"]
+	path = Drivers/STM32N6xx_HAL_Driver
+	url = https://github.com/STMicroelectronics/stm32n6xx-hal-driver.git
+	branch = main
+[submodule "Drivers/CMSIS/Device/ST/STM32N6xx"]
+	path = Drivers/CMSIS/Device/ST/STM32N6xx
+	url = https://github.com/STMicroelectronics/cmsis-device-n6.git
+	branch = main
+[submodule "Drivers/BSP/STM32N6xx_Nucleo"]
+	path = Drivers/BSP/STM32N6xx_Nucleo
+	url = https://github.com/STMicroelectronics/stm32n6xx-nucleo-bsp.git
+	branch = main
+[submodule "Drivers/BSP/STM32N6570-DK"]
+	path = Drivers/BSP/STM32N6570-DK
+	url = https://github.com/STMicroelectronics/stm32n6570-dk-bsp.git
+	branch = main
+[submodule "Drivers/BSP/Components/Common"]
+	path = Drivers/BSP/Components/Common
+	url = https://github.com/STMicroelectronics/stm32-bsp-common.git
+	branch = main
+[submodule "Drivers/BSP/Components/lan8742"]
+	path = Drivers/BSP/Components/lan8742
+	url = https://github.com/STMicroelectronics/stm32-lan8742.git
+	branch = main
+[submodule "Drivers/BSP/Components/tcpp0203"]
+	path = Drivers/BSP/Components/tcpp0203
+	url = https://github.com/STMicroelectronics/stm32-tcpp0203.git
+	branch = main
+[submodule "Middlewares/Third_Party/FatFs"]
+	path = Middlewares/Third_Party/FatFs
+	url = https://github.com/STMicroelectronics/stm32-mw-fatfs.git
+	branch = master
+[submodule "Middlewares/Third_Party/LwIP"]
+	path = Middlewares/Third_Party/LwIP
+	url = https://github.com/STMicroelectronics/stm32-mw-lwip.git
+	branch = master
+[submodule "Middlewares/ST/STM32_USB_Device_Library"]
+	path = Middlewares/ST/STM32_USB_Device_Library
+	url = https://github.com/STMicroelectronics/stm32-mw-usb-device.git
+	branch = master
+[submodule "Middlewares/ST/STM32_USB_Host_Library"]
+	path = Middlewares/ST/STM32_USB_Host_Library
+	url = https://github.com/STMicroelectronics/stm32-mw-usb-host.git
+	branch = master
