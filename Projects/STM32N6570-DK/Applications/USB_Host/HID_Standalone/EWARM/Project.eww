@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspace>
   <project>
-    <path>$WS_DIR$\HID_Standalone.ewp</path>
+    <path>$WS_DIR$\FSBL\HID_Standalone_FSBL.ewp</path>
   </project>
   <batchBuild />
 </workspace>

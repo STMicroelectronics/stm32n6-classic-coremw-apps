@@ -141,15 +141,15 @@ be executed in this mode for debugging purposes.</li>
 done by following the instructions below:</p>
 <ul>
 <li>Resort to CubeProgrammer to add a header to the generated binary
-FatFs_RAMDISK_Standalone.bin with the following command
+FatFs_RAMDISK_Standalone_FSBL.bin with the following command
 <ul>
-<li><em>STM32_SigningTool_CLI.exe -bin FatFs_RAMDISK_Standalone.bin -nk
--of 0x80000000 -t fsbl -o FatFs_RAMDISK_Standalone-trusted.bin -hv 2.3
--dump FatFs_RAMDISK_Standalone-trusted.bin</em></li>
-<li>The resulting binary is FatFs_RAMDISK_Standalone-trusted.bin.</li>
+<li><em>STM32_SigningTool_CLI.exe -bin FatFs_RAMDISK_Standalone_FSBL.bin -nk
+-of 0x80000000 -t fsbl -o FatFs_RAMDISK_Standalone_FSBL-trusted.bin -hv 2.3
+-dump FatFs_RAMDISK_Standalone_FSBL-trusted.bin</em></li>
+<li>The resulting binary is FatFs_RAMDISK_Standalone_FSBL-trusted.bin.</li>
 </ul></li>
 <li>Next, in resorting again to CubeProgrammer, load the binary and its
-header (FatFs_RAMDISK_Standalone-trusted.bin) in Nucleo board external
+header (FatFs_RAMDISK_Standalone_FSBL-trusted.bin) in Nucleo board external
 Flash at address 0x7000’0000.</li>
 <li>Set the boot mode in boot from external Flash (BOOT0 switch position
 is 1-2 and BOOT1 switch position is 1-2).</li>

@@ -35,7 +35,7 @@ Then the SystemClock_Config() function is used to configure the system clock
 
 #### Error behaviors
    - LED_RED is ON indicating the ethernet cable is not connected.
-   - LED_RED is toggling to indicate a critical error has occured.
+   - LED_RED is toggling to indicate a critical error has occurred.
    - The error message is printed on the HyperTerminal.
 
 #### Assumptions if any
@@ -119,9 +119,9 @@ In order to make the program work, you must do the following :
 
 Next, this program can be run in boot from flash mode. This can be done by following the instructions below:
 
- - Resort to CubeProgrammer to add a header to the generated binary LwIP_TCP_Echo_Server.bin with the following command
-   - *STM32_SigningTool_CLI.exe -bin LwIP_TCP_Echo_Server.bin -nk -of 0x80000000 -t fsbl -o LwIP_TCP_Echo_Server-trusted.bin -hv 2.3 -dump LwIP_TCP_Echo_Server-trusted.bin*
-   - The resulting binary is LwIP_TCP_Echo_Server-trusted.bin.
- - Next, in resorting again to CubeProgrammer, load the binary and its header (LwIP_TCP_Echo_Server-trusted.bin) in Nucleo board external Flash at address 0x7000'0000.
+ - Resort to CubeProgrammer to add a header to the generated binary LwIP_TCP_Echo_Server_FSBL.bin with the following command
+   - *STM32_SigningTool_CLI.exe -bin LwIP_TCP_Echo_Server_FSBL.bin -nk -of 0x80000000 -t fsbl -o LwIP_TCP_Echo_Server_FSBL-trusted.bin -hv 2.3 -dump LwIP_TCP_Echo_Server_FSBL-trusted.bin*
+   - The resulting binary is LwIP_TCP_Echo_Server_FSBL-trusted.bin.
+ - Next, in resorting again to CubeProgrammer, load the binary and its header (LwIP_TCP_Echo_Server_FSBL-trusted.bin) in Nucleo board external Flash at address 0x7000'0000.
  - Set the boot mode in boot from external Flash (BOOT0 switch position is 1-2 and BOOT1 switch position is 1-2).
  - Press the reset button. The code then executes in boot from external Flash mode.

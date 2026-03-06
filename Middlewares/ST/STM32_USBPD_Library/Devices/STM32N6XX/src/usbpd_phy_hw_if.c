@@ -343,13 +343,11 @@ void HW_SignalAttachement(uint8_t PortNum, CCxPin_TypeDef cc)
   (void)BSP_USBPD_PWR_VCONNInit(PortNum, (Ports[PortNum].CCx == CC1) ? 1u : 2u);
 #endif /* _VCONN_SUPPORT */
 
-#if defined(USBPD_REV30_SUPPORT)
   if (Ports[PortNum].settings->PE_PD3_Support.d.PE_FastRoleSwapSupport == USBPD_TRUE)
   {
     /* Set GPIO to allow the FRS TX handling */
     USBPD_HW_SetFRSSignalling(PortNum, (Ports[PortNum].CCx == CC1) ? 1u : 2u);
   }
-#endif /* USBPD_REV30_SUPPORT */
 
   /* Disable the Resistor on Vconn PIN */
   if (Ports[PortNum].CCx == CC1)

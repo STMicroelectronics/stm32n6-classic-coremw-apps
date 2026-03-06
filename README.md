@@ -2,7 +2,7 @@
 
 ![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/stm32n6-classic-coremw-apps.svg?color=brightgreen)
 
-![freertos](https://img.shields.io/badge/freertos-v10.6.2-blue.svg) ![fatfs](https://img.shields.io/badge/fatfs-v0.15-blue.svg) ![usb_device](https://img.shields.io/badge/usb_device-v2.11.2-blue.svg) ![usb_host](https://img.shields.io/badge/usb_host-v3.5.1-blue.svg) ![lwip](https://img.shields.io/badge/lwip-v2.1.3-blue.svg)
+![freertos](https://img.shields.io/badge/freertos-v11.2.0-blue.svg) ![fatfs](https://img.shields.io/badge/fatfs-v0.15-blue.svg) ![usb_device](https://img.shields.io/badge/usb_device-v2.11.5-blue.svg) ![usb_host](https://img.shields.io/badge/usb_host-v3.5.4-blue.svg) ![lwip](https://img.shields.io/badge/lwip-v2.2.1-blue.svg)
 
 ## Description
 
@@ -34,6 +34,7 @@ Middleware    | Application                            | Short Description
 FatFs         | FatFs_RAMDISK_Standalone               | Shows how to use STM32Cube firmware with FatFs middleware component as a generic FAT file system module
 ST USB Device | HID_Standalone                         | Shows a typical application where the STM32 MCU is enumerated as a HID device
 ST USB Device | CDC_Standalone                         | Shows a typical application where the STM32 MCU is enumerated as a CDC device
+ST USB Device | CustomHID_CDC_ACM_RTOS                 | Shows a typical application where the STM32 MCU is enumerated as a CustomHID CDC device
 ST USB Host   | HID_Standalone                         | Shows how to use USB host application based on the Human Interface Class (HID) to connect a mouse or a keyboard
 ST USB Host   | CDC_Standalone                         | Shows how to use USB host application based on the Communication Device Class (CDC) to communicate with a usb flash disk
 LwIP          | LwIP_TCP_Echo_Server                   | This application guides STM32Cube HAL API users to run TCP Echo Server application based on Raw API of LwIP TCP/IP stack
@@ -53,7 +54,7 @@ LwIP          | LwIP_UDP_Echo_Server                   | This application guides
 
  * IAR Embedded Workbench for ARM (EWARM) toolchain **9.40.1** + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeN6/tree/main/Utilities/PC_Software)
  * RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.39 + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeN6/tree/main/Utilities/PC_Software)
- * [STM32CubeIDE **V1.17.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
+ * [STM32CubeIDE **V2.1.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
 
 
 
@@ -63,17 +64,21 @@ This package has been developed and tested using the list of components detailed
 
 Name                       |   Version
 ---------------------------|---------------
-Cortex-M CMSIS             |   V5.9.0
-STM32N6xx CMSIS            |   V1.1.0
-STM32N6xx HAL              |   V1.1.0
-BSP STM32N6xx NUCLEO       |   V1.0.0
-BSP STM32N6570-DK          |   V1.1.0
+Cortex-M CMSIS             |   v5.9.0_fix_620_dsp_v1.10.0_nn_v3.1.0_no_doc
+STM32N6xx CMSIS            |   V1.3.0
+STM32N6xx HAL              |   V1.3.0
+BSP STM32N6xx NUCLEO       |   V1.2.0
+BSP STM32N6570-DK          |   V1.3.0
 BSP Common                 |   V7.3.0
 BSP lan8742                |   V1.0.4
+BSP tcpp0203               |   V1.2.3
+FreeRTOS                   |   V11.2.0
 FatFS                      |   R0.15
-LwIP                       |   V2.1.3
-STM32 USB Device Library   |   V2.11.3
-STM32 USB Host Library     |   V3.5.3
+LwIP                       |   V2.2.1
+STM32 USB Device Library   |   V2.11.5
+STM32 USB Host Library     |   V3.5.4
+STM32 USBPD Core Library   |   V5.3.1
+STM32 USBPD Device Library |   n6_V1.0.1
 
 ## How to use
 

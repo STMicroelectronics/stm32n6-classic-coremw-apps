@@ -85,7 +85,7 @@ hyperterminals (USB com port and UART com port(USB STLink VCP)) to
 send/receive data to/from host from/to device.</p>
 <h4 id="error-behaviors"><b>Error behaviors</b></h4>
 <ul>
-<li>LED_RED is toggling to indicate a critical error has occured.</li>
+<li>LED_RED is toggling to indicate a critical error has occurred.</li>
 </ul>
 <h4 id="assumptions-if-any"><b>Assumptions if any</b></h4>
 <p>User is familiar with USB 2.0 “Universal Serial BUS” specification
@@ -235,15 +235,15 @@ be executed in this mode for debugging purposes.</li>
 done by following the instructions below:</p>
 <ul>
 <li>Resort to CubeProgrammer to add a header to the generated binary
-CDC_Standalone.bin with the following command
+CDC_Standalone_FSBL.bin with the following command
 <ul>
-<li><em>STM32_SigningTool_CLI.exe -bin CDC_Standalone.bin -nk -of
-0x80000000 -t fsbl -o CDC_Standalone-trusted.bin -hv 2.3 -dump
-CDC_Standalone-trusted.bin</em></li>
-<li>The resulting binary is CDC_Standalone-trusted.bin.</li>
+<li><em>STM32_SigningTool_CLI.exe -bin CDC_Standalone_FSBL.bin -nk -of
+0x80000000 -t fsbl -o CDC_Standalone_FSBL-trusted.bin -hv 2.3 -dump
+CDC_Standalone_FSBL-trusted.bin</em></li>
+<li>The resulting binary is CDC_Standalone_FSBL-trusted.bin.</li>
 </ul></li>
 <li>Next, in resorting again to CubeProgrammer, load the binary and its
-header (CDC_Standalone-trusted.bin) in Nucleo board external Flash at
+header (CDC_Standalone_FSBL-trusted.bin) in Nucleo board external Flash at
 address 0x7000’0000.</li>
 <li>Set the boot mode in boot from external Flash (BOOT0 switch position
 is 1-2 and BOOT1 switch position is 1-2).</li>

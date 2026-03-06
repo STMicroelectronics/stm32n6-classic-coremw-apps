@@ -52,7 +52,7 @@ Then the SystemClock_Config() function is used to configure the system clock
 <h4 id="error-behaviors"><b>Error behaviors</b></h4>
 <ul>
 <li>LED_RED is ON indicating the ethernet cable is not connected</li>
-<li>LED_RED is toggling to indicate a critical error has occured</li>
+<li>LED_RED is toggling to indicate a critical error has occurred</li>
 <li>The error message is printed on the HyperTerminal</li>
 </ul>
 <h4 id="assumptions-if-any"><b>Assumptions if any</b></h4>
@@ -134,12 +134,12 @@ data to the server and checking whether they came back</li>
 </ul>
 <p>Next, this program can be run in boot from flash mode. This can be done by following the instructions below:</p>
 <ul>
-<li>Resort to CubeProgrammer to add a header to the generated binary LwIP_UDP_Echo_Server.bin with the following command
+<li>Resort to CubeProgrammer to add a header to the generated binary LwIP_UDP_Echo_Server_FSBL.bin with the following command
 <ul>
-<li>*STM32_SigningTool_CLI.exe -bin LwIP_UDP_Echo_Server.bin -nk -of 0x80000000 -t fsbl -o LwIP_UDP_Echo_Server-trusted.bin -hv 2.3 -dump LwIP_UDP_Echo_Server-trusted.bin*</li>
-<li>The resulting binary is LwIP_UDP_Echo_Server-trusted.bin.</li>
+<li>*STM32_SigningTool_CLI.exe -bin LwIP_UDP_Echo_Server_FSBL.bin -nk -of 0x80000000 -t fsbl -o LwIP_UDP_Echo_Server_FSBL-trusted.bin -hv 2.3 -dump LwIP_UDP_Echo_Server-trusted.bin*</li>
+<li>The resulting binary is LwIP_UDP_Echo_Server_FSBL-trusted.bin.</li>
 </ul></li>
-<li>Next, in resorting again to CubeProgrammer, load the binary and its header (LwIP_UDP_Echo_Server-trusted.bin) in Nucleo board external Flash at address 0x7000'0000</li>
+<li>Next, in resorting again to CubeProgrammer, load the binary and its header (LwIP_UDP_Echo_Server_FSBL-trusted.bin) in Nucleo board external Flash at address 0x7000'0000</li>
 <li>Set the boot mode in boot from external Flash (BOOT0 switch position is 1-2 and BOOT1 switch position is 1-2)</li>
 <li>Press the reset button. The code then executes in boot from external Flash mode</li>
 </ul>

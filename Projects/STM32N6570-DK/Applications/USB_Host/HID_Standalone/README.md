@@ -30,7 +30,7 @@ The received HID reports are used by host to identify:
 #### <b>Error behaviors</b>
 
   - Errors are detected (such as unsupported device, enumeration fail) and the corresponding message is displayed on the HyperTerminal.
-  - LED_RED is toggling to indicate a critical error has occured.
+  - LED_RED is toggling to indicate a critical error has occurred.
 
 #### <b>Assumptions if any</b>
 
@@ -129,10 +129,10 @@ In order to make the program work, you must do the following :
 
  Next, this program can be run in boot from flash mode. This is done by following the instructions below:
 
- - Resort to CubeProgrammer to add a header to the generated binary HID_Standalone.bin with the following command
-   - *STM32_SigningTool_CLI.exe -bin HID_Standalone.bin -nk -of 0x80000000 -t fsbl -o HID_Standalone-trusted.bin -hv 2.3 -dump HID_Standalone-trusted.bin*
-   - The resulting binary is HID_Standalone-trusted.bin.
- - Next, in resorting again to CubeProgrammer, load the binary and its header (HID_Standalone-trusted.bin) in DK board external Flash at address 0x7000'0000.
+ - Resort to CubeProgrammer to add a header to the generated binary HID_Standalone_FSBL.bin with the following command
+   - *STM32_SigningTool_CLI.exe -bin HID_Standalone_FSBL.bin -nk -of 0x80000000 -t fsbl -o HID_Standalone_FSBL-trusted.bin -hv 2.3 -dump HID_Standalone_FSBL-trusted.bin*
+   - The resulting binary is HID_Standalone_FSBL-trusted.bin.
+ - Next, in resorting again to CubeProgrammer, load the binary and its header (HID_Standalone_FSBL-trusted.bin) in DK board external Flash at address 0x7000'0000.
  - Set the boot mode in boot from external Flash (BOOT0 switch position is 1-2 and BOOT1 switch position is 1-2).
  - Press the reset button. The code then executes in boot from external Flash mode.
 
